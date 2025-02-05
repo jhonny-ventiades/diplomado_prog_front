@@ -1,0 +1,13 @@
+
+<h3>{{'Numero de productos: ' + productos.length}}</h3>
+ <div *ngFor="let item of productos" >
+ <!--aqui cargamos el item-->
+  <app-post-card 
+  [producto]="item"
+  (avisarAlPadreMensajeCambiado)="mensajeActualizado($event)">
+  </app-post-card>
+
+</div>
+
+<app-post-card 
+  [producto]="{mensaje: 'No es un producto (Oferta)', precio: 10, fecha: 'Sin Fecha'}" ></app-post-card>
